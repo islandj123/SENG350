@@ -3,6 +3,7 @@ import { FetchData } from "./components/FetchData";
 import { Home } from "./components/Home";
 import { ED } from "./components/ED";
 import { Appointment } from "./components/Appointment";
+import { User } from "./components/User";
 
 const AppRoutes = [
   {
@@ -24,6 +25,10 @@ const AppRoutes = [
   {
     path: '/appointment-booking',
     element: <Appointment />
+  },
+  {
+    path: '/user-management',
+    element: <User />
   }
 ];
 

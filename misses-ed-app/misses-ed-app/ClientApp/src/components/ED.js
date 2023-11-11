@@ -5,31 +5,34 @@ export class ED extends Component {
 
   constructor(props) {
     super(props);
-    this.state = { forecasts: [], loading: true };
+    this.state = { eds: [], loading: true };
   }
 
   componentDidMount() {
-    this.populateWeatherData();
+    this.populateEDData();
   }
 
-  static renderForecastsTable(forecasts) {
+  static renderEDTable(eds) {
     return (
       <table className="table table-striped" aria-labelledby="tableLabel">
         <thead>
           <tr>
-            <th>Date</th>
-            <th>Temp. (C)</th>
-            <th>Temp. (F)</th>
-            <th>Summary</th>
+            <th>ID</th>
+            <th>ADDRESS</th>
+            <th>LATITUDE</th>
+            <th>LONGITUDE</th>
+            <th>CAPACITY</th>
+            <th>WAIT</th>
           </tr>
         </thead>
         <tbody>
-          {forecasts.map(forecast =>
-            <tr key={forecast.date}>
-              <td>{forecast.date}</td>
-              <td>{forecast.temperatureC}</td>
-              <td>{forecast.temperatureF}</td>
-              <td>{forecast.summary}</td>
+          {eds.map(ed =>
+            <tr key={ed.id}>
+              <td>{ed.address}</td>
+              <td>{ed.latitude}</td>
+              <td>{ed.longitude}</td>
+              <td>{ed.capacity}</td>
+              <td>{ed.wait}</td>
             </tr>
           )}
         </tbody>
@@ -40,7 +43,7 @@ export class ED extends Component {
   render() {
     let contents = this.state.loading
       ? <p><em>Loading...</em></p>
-      : ED.renderForecastsTable(this.state.forecasts);
+      : ED.renderEDTable(this.state.eds);
 
     return (
       <div>
@@ -51,9 +54,9 @@ export class ED extends Component {
     );
   }
 
-  async populateWeatherData() {
-    const response = await fetch('weatherforecast');
+  async populateEDData() {
+    const response = await fetch('eds');
     const data = await response.json();
-    this.setState({ forecasts: data, loading: false });
+    this.setState({ eds: data, loading: false });
   }
 }

@@ -5,31 +5,31 @@ export class Appointment extends Component {
 
   constructor(props) {
     super(props);
-    this.state = { forecasts: [], loading: true };
+    this.state = { appointments: [], loading: true };
   }
 
   componentDidMount() {
-    this.populateWeatherData();
+    this.populateAppointmentData();
   }
 
-  static renderForecastsTable(forecasts) {
+  static renderAppointmentsTable(appointments) {
     return (
       <table className="table table-striped" aria-labelledby="tableLabel">
         <thead>
           <tr>
-            <th>Date</th>
-            <th>Temp. (C)</th>
-            <th>Temp. (F)</th>
-            <th>Summary</th>
+            <th>Appointment ID</th>
+            <th>ED ID</th>
+            <th>User ID</th>
+            <th>Time</th>
           </tr>
         </thead>
         <tbody>
-          {forecasts.map(forecast =>
-            <tr key={forecast.date}>
-              <td>{forecast.date}</td>
-              <td>{forecast.temperatureC}</td>
-              <td>{forecast.temperatureF}</td>
-              <td>{forecast.summary}</td>
+          {appointments.map(appointment =>
+            <tr key={appointment.appointmentId}>
+              <td>{appointment.appointmentId}</td>
+              <td>{appointment.edId}</td>
+              <td>{appointment.userId}</td>
+              <td>{appointment.time}</td>
             </tr>
           )}
         </tbody>
@@ -40,7 +40,7 @@ export class Appointment extends Component {
   render() {
     let contents = this.state.loading
       ? <p><em>Loading...</em></p>
-      : Appointment.renderForecastsTable(this.state.forecasts);
+      : Appointment.renderAppointmentsTable(this.state.appointments);
 
     return (
       <div>
@@ -51,9 +51,9 @@ export class Appointment extends Component {
     );
   }
 
-  async populateWeatherData() {
-    const response = await fetch('weatherforecast');
+  async populateAppointmentData() {
+    const response = await fetch('appointments');
     const data = await response.json();
-    this.setState({ forecasts: data, loading: false });
+    this.setState({ appointments: data, loading: false });
   }
 }
