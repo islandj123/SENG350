@@ -14,6 +14,7 @@ namespace misses_ed_app.Controllers
         }
 
         [HttpGet]
+        [Route("/appointments")]
         public IEnumerable<Appointment> Get()
         {
             int appointmentId = 34;

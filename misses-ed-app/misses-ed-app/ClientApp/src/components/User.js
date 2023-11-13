@@ -44,7 +44,7 @@ export class User extends Component {
 
     return (
       <div>
-        <h1 id="tableLabel">User</h1>
+        <h1 id="tableLabel">Users</h1>
         <p>This component will demonstrate fetching user data from the server.</p>
         {contents}
       </div>

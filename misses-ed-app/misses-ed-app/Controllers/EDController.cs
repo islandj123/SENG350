@@ -14,6 +14,7 @@ namespace misses_ed_app.Controllers
         }
 
         [HttpGet]
+        [Route("/eds")]
         public IEnumerable<ED> Get()
         {
             int id = 34;

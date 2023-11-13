@@ -3,6 +3,11 @@ using Microsoft.EntityFrameworkCore.SqlServer;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.AspNetCore;
 using System;
+using misses_ed_app.Entities;
+using misses_ed_app.Database;
+using misses_ed_app.Interfaces.UserManagement;
+using misses_ed_app.Services.UserManagement;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,6 +16,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddScoped<IUserService, UserService>();
 
 var connection = String.Empty;
 if (builder.Environment.IsDevelopment())
@@ -23,7 +29,7 @@ else
     connection = Environment.GetEnvironmentVariable("AZURE_SQL_CONNECTIONSTRING");
 }
 
-builder.Services.AddDbContext<UserDbContext>(options => options.UseSqlServer(connection));
+builder.Services.AddDbContext<AppDbContext>(options => options.UseSqlServer(connection));
 
 var app = builder.Build();
 
@@ -49,9 +55,9 @@ app.MapControllerRoute(
 
 app.MapFallbackToFile("index.html");
 
+app.Run();
 
-
-app.MapGet("/User", (UserDbContext context) =>
+/*app.MapGet("/User", (UserDbContext context) =>
 {
     return context.User.ToList();
 })
@@ -61,25 +67,15 @@ app.MapPost("/User", (User user, UserDbContext context) =>
 {
     context.Add(user);
     context.SaveChanges();
-}).WithName("CreateUser").WithOpenApi();
+}).WithName("CreateUser").WithOpenApi();*/
 
 
-app.Run();
+// public class UserDbContext : DbContext
+// {
+//     public UserDbContext(DbContextOptions<UserDbContext> options)
+//         : base(options)
+//     {
+//     }
 
-public class User
-{
-    public int Id { get; set; }
-    public required string Username { get; set; }
-    public required string Password { get; set; }
-    public required string Email { get; set; }
-}
-
-public class UserDbContext : DbContext
-{
-    public UserDbContext(DbContextOptions<UserDbContext> options)
-        : base(options)
-    {
-    }
-
-    public DbSet<User> User { get; set; }
-}
+//     public DbSet<User> User { get; set; }
+// }
