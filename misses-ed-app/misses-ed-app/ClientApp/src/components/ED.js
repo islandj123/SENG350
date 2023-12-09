@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import Map from './Map.js';
+import Hospitals from './Hospitals.js';
 
 export class ED extends Component {
   static displayName = ED.name;
@@ -12,31 +14,46 @@ export class ED extends Component {
     this.populateEDData();
   }
 
+  async populateEDData() {
+    const response = await fetch('eds');
+    const data = await response.json();
+    this.setState({ eds: data, loading: false });
+  }
+
+
   static renderEDTable(eds) {
     return (
-      <table className="table table-striped" aria-labelledby="tableLabel">
-        <thead>
-          <tr>
-            <th>ID</th>
-            <th>ADDRESS</th>
-            <th>LATITUDE</th>
-            <th>LONGITUDE</th>
-            <th>CAPACITY</th>
-            <th>WAIT</th>
-          </tr>
-        </thead>
-        <tbody>
-          {eds.map(ed =>
-            <tr key={ed.id}>
-              <td>{ed.address}</td>
-              <td>{ed.latitude}</td>
-              <td>{ed.longitude}</td>
-              <td>{ed.capacity}</td>
-              <td>{ed.wait}</td>
+
+      <div>
+        <div>
+          <Map hospitals={Hospitals} location = {{ lat: 48.4284, lng: -123.3656}}/>
+        </div>
+        
+        <table className="table table-striped" aria-labelledby="tableLabel">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>ADDRESS</th>
+              <th>LATITUDE</th>
+              <th>LONGITUDE</th>
+              <th>CAPACITY</th>
+              <th>WAIT</th>
             </tr>
-          )}
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            {Hospitals.map(ed =>
+              <tr key={ed.id}>
+                <td>{ed.id}</td>
+                <td>{ed.address}</td>
+                <td>{ed.latitude}</td>
+                <td>{ed.longitude}</td>
+                <td>{ed.capacity}</td>
+                <td>{ed.wait}</td>
+              </tr>
+            )}
+          </tbody>
+        </table>
+      </div>
     );
   }
 
@@ -52,11 +69,5 @@ export class ED extends Component {
         {contents}
       </div>
     );
-  }
-
-  async populateEDData() {
-    const response = await fetch('eds');
-    const data = await response.json();
-    this.setState({ eds: data, loading: false });
   }
 }
