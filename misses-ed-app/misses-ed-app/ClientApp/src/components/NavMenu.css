@@ -1,10 +1,4 @@
-﻿a.navbar-brand {
-  white-space: normal;
-  text-align: center;
-  word-break: break-all;
-}
-
-html {
+﻿html {
   font-size: 14px;
 }
 @media (min-width: 768px) {
@@ -13,6 +7,35 @@ html {
   }
 }
 
+a.navbar-brand {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+}
+
+.navbar-nav {
+    align-items: center;
+}
+
+.header {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+  background-color: #fff;
+}
+
 .box-shadow {
   box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
 }
+
+.active {
+    background-color: #e6e6e6;
+    text-decoration: underline;
+}
+
+a:hover {
+    background-color: #efefef;
+}
+
+

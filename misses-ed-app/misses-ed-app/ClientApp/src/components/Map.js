@@ -114,7 +114,7 @@ const Map = ({ hospitals, location }) => {
     window.open(`https://www.google.com/maps/dir/?api=1&destination=${lat},${lng}`);
   };
 
-  return <div id="map" style={{ height: '400px', width: '100%' }} />;
+  return <div id="map" style={{ height: '440px', width: '100%' }} />;
 };
 
 export default Map;

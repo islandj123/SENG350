@@ -52,8 +52,20 @@ export class User extends Component {
   }
 
   async populateUserData() {
-    const response = await fetch('users');
+    const response = await fetch('api/misses-ed/users');
     const data = await response.json();
     this.setState({ users: data, loading: false });
-  }
+    }
+
+    //Function for calling UserService to get all users
+    getAllUsers() {
+        fetch('users')
+        .then(response => response.json())
+        .catch(error => console.error('Error:', error))
+/*        UserService.getAllUsers().then((response) => {
+            this.setState({ users: response.data })
+        });*/
+    }
+
+
 }
