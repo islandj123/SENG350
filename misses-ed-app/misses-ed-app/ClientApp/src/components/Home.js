@@ -24,7 +24,7 @@ export class Home extends Component {
         <h2 className='mb-4'>Welcome {this.state.username}</h2>
         <div className='row w-100 gap-4'>
           <div className='col'>
-            <this.LargeButton link={"/user-management"} label="Virtual Triage"></this.LargeButton>
+            <this.LargeButton link={"/virtual-triage"} label="Virtual Triage"></this.LargeButton>
           </div>
           <div className='col'>
             <this.LargeButton link={"/appointment-booking"} label="Appointments"></this.LargeButton>

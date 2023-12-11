@@ -4,6 +4,7 @@ import { Home } from "./components/Home";
 import { ED } from "./components/ED";
 import { Appointment } from "./components/Appointment";
 import { User } from "./components/User";
+import { VirtualTriage } from "./components/VirtualTriage";
 
 const AppRoutes = [
   {
@@ -17,6 +18,10 @@ const AppRoutes = [
   {
     path: '/fetch-data',
     element: <FetchData />
+  },
+  {
+    path: '/virtual-triage',
+    element: <VirtualTriage />
   },
   {
     path: '/ed-services',

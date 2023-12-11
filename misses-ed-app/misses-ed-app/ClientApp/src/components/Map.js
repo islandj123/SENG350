@@ -72,6 +72,7 @@ function initMap(hospitals, center) {
         <strong>Wait Time:</strong> ${hospital.wait}<br>
         <strong>Address:</strong> ${hospital.address}<br>
         <button onclick="openDirections(${hospital.latitude}, ${hospital.longitude})">Directions</button>
+        <button onclick="bookAppointment()">Book Appointment</button>
       </div>
     `;
 
@@ -112,6 +113,10 @@ const Map = ({ hospitals, location }) => {
 
   window.openDirections = (lat, lng) => {
     window.open(`https://www.google.com/maps/dir/?api=1&destination=${lat},${lng}`);
+  };
+
+  window.bookAppointment = () => {
+    window.location.href = '/appointment-booking';
   };
 
   return <div id="map" style={{ height: '440px', width: '100%' }} />;
