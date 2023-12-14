@@ -84,10 +84,10 @@ namespace misses_ed_app.Controllers
             _UserService = UserService;
         }
 
-        int[] id = [1, 2, 3, 4, 5];
-        String[] username = ["bobby123", "dylanmyvillain", "pegglemaster", "BillClinton69", "dangerman"];
-        String[] password = ["$2a$12$RiLVMytYdyslcA1f8m2Qeu/jrQe/Eqow6D0A9K./b54cR7cB1XPH6", "$2y$10$ThIFWuHY9NDg9A9EfmZaCej0.54ug3s.mWv0GIXjJGJhB1VeMM4oa", "$2b$14$S8GmL9LlxF4XwzZJ2EAWIuQYFCGhHEqX7KlJHl8eud.2A2j4u2mru", "$2a$08$YZqTfyE5OlN.p6RYwF8ZueYx2fUGPvl/2W3YkYVBF3GJMtHXl.3uS", "$2y$13$E34oY0JU02ZI.TXjlbBWXOpqSzGHyVVZlgfF8ClnC/9X21nlRR.bu"];
-        String[] email = ["bobby@gmail.com", "dylanog@hotmail.com", "pegglemaster@gmail.com", "BestPrez420@gmail.com", "toughluck@gmail.com"];
+        int[] id = new int[] {1, 2, 3, 4, 5};
+        String[] username = new String[] {"bobby123", "dylanmyvillain", "pegglemaster", "BillClinton69", "dangerman"};
+        String[] password = new String[] {"$2a$12$RiLVMytYdyslcA1f8m2Qeu/jrQe/Eqow6D0A9K./b54cR7cB1XPH6", "$2y$10$ThIFWuHY9NDg9A9EfmZaCej0.54ug3s.mWv0GIXjJGJhB1VeMM4oa", "$2b$14$S8GmL9LlxF4XwzZJ2EAWIuQYFCGhHEqX7KlJHl8eud.2A2j4u2mru", "$2a$08$YZqTfyE5OlN.p6RYwF8ZueYx2fUGPvl/2W3YkYVBF3GJMtHXl.3uS", "$2y$13$E34oY0JU02ZI.TXjlbBWXOpqSzGHyVVZlgfF8ClnC/9X21nlRR.bu"};
+        String[] email = new String[] {"bobby@gmail.com", "dylanog@hotmail.com", "pegglemaster@gmail.com", "BestPrez420@gmail.com", "toughluck@gmail.com"};
 
 
         [HttpGet]
