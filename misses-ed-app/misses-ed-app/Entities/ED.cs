@@ -1,15 +1,17 @@
 public class ED
 {
-    public required int Id { get; set; }
-    public required string Address { get; set; }
-    public required double Latitude { get; set; }
-    public required double Longitude { get; set; }
-    public required int Capacity { get; set; }
-    public required string Wait { get; set; }
+    public int Id { get; set; }
+    public string Name { get; set; }
+    public string Address { get; set; }
+    public double Latitude { get; set; }
+    public double Longitude { get; set; }
+    public int Capacity { get; set; }
+    public int Wait { get; set; }
 
-    public ED(int id, string address, double latitude, double longitude, int capacity, string wait)
+    public ED(int id, string name, string address, double latitude, double longitude, int capacity, int wait)
     {
         Id = id;
+        Name = name;
         Address = address;
         Latitude = latitude;
         Longitude = longitude;

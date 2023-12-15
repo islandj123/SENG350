@@ -55,7 +55,7 @@ function initMap(hospitals, center) {
     const marker = new window.google.maps.Marker({
       position: hospitalLatLng,
       map: map,
-      title: hospital.id,
+      title: hospital.name,
       icon: {
         path: window.google.maps.SymbolPath.CIRCLE,
         fillColor: markerColor,
@@ -69,6 +69,7 @@ function initMap(hospitals, center) {
     const content = `
       <div>
         <strong>Hospital ID:</strong> ${hospital.id}<br>
+        <strong>Hospital Name:</strong> ${hospital.name}<br>
         <strong>Wait Time:</strong> ${hospital.wait}<br>
         <strong>Address:</strong> ${hospital.address}<br>
         <button onclick="openDirections(${hospital.latitude}, ${hospital.longitude})">Directions</button>
