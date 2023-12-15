@@ -23,8 +23,8 @@ namespace misses_ed_app.Controllers
                     id: 1,
                     name: "Esquimalt General Hospital",
                     address: "500 Admirals Rd, Esquimalt, BC",
-                    latitude: 48.435558,
-                    longitude: -123.439099,
+                    latitude: 48.42846966902537,
+                    longitude: -123.41731439524088,
                     capacity: 150,
                     wait: 5
                 ),
@@ -34,8 +34,8 @@ namespace misses_ed_app.Controllers
                     address: "800 Burdett Ave, Victoria, BC",
                     latitude: 48.422629,
                     longitude: -123.361620,
-                    capacity: 200,
-                    wait: 8
+                    capacity: 130,
+                    wait: 22
                 ),
                 new ED(
                     id: 3,
@@ -43,34 +43,34 @@ namespace misses_ed_app.Controllers
                     address: "1695 Cedar Hill Cross Rd, Victoria, BC",
                     latitude: 48.450099,
                     longitude: -123.343861,
-                    capacity: 180,
+                    capacity: 40,
                     wait: 15
                 ),
                 new ED(
                     id: 4,
-                    name: "Downtown Health Clinic",
-                    address: "835 Yates St, Victoria, BC",
-                    latitude: 48.424697,
-                    longitude: -123.362358,
+                    name: "Victoria General Hospital",
+                    address: "1, Hospital Way, Victoria, BC",
+                    latitude: 48.467010864021105,
+                    longitude: -123.43185305637196,
                     capacity: 220,
-                    wait: 20
+                    wait: 5
                 ),
                 new ED(
                     id: 5,
                     name: "Westshore Community Hospital",
                     address: "2145 Sooke Rd, Colwood, BC",
-                    latitude: 48.442766,
-                    longitude: -123.455394,
-                    capacity: 120,
+                    latitude: 48.43665945486022,
+                    longitude: -123.48691972142205,
+                    capacity: 100,
                     wait: 35
                 ),
                 new ED(
                     id: 6,
-                    name: "Oak Bay Medical Center",
+                    name: "Cadboro Bay Medical Center",
                     address: "2015 Cadboro Bay Rd, Victoria, BC",
                     latitude: 48.460263,
                     longitude: -123.310355,
-                    capacity: 180,
+                    capacity: 50,
                     wait: 40
                 ),
                 new ED(
@@ -79,17 +79,17 @@ namespace misses_ed_app.Controllers
                     address: "2631 Quadra St, Victoria, BC",
                     latitude: 48.439735,
                     longitude: -123.361044,
-                    capacity: 160,
-                    wait: 7
+                    capacity: 30,
+                    wait: 55
                 ),
                 new ED(
                     id: 8,
-                    name: "Fernwood Health Hub",
-                    address: "1835 Fernwood Rd, Victoria, BC",
-                    latitude: 48.428339,
-                    longitude: -123.314076,
+                    name: "Royal Jubilee Hospital",
+                    address: "1952 Bay Street, Victoria, BC",
+                    latitude: 48.43319257260507,
+                    longitude: -123.32701164845716,
                     capacity: 200,
-                    wait: 25
+                    wait: 9
                 ),
                 new ED(
                     id: 9,
@@ -102,11 +102,11 @@ namespace misses_ed_app.Controllers
                 ),
                 new ED(
                     id: 10,
-                    name: "Langford Wellness Center",
+                    name: "Langford General Hospital",
                     address: "2850 Peatt Rd, Langford, BC",
-                    latitude: 48.447509,
-                    longitude: -123.497143,
-                    capacity: 180,
+                    latitude: 48.44771249187802,
+                    longitude: -123.50169429299504,
+                    capacity: 120,
                     wait: 12
                 ),
             };

@@ -72,6 +72,7 @@ function initMap(hospitals, center) {
         <strong>Hospital Name:</strong> ${hospital.name}<br>
         <strong>Wait Time:</strong> ${hospital.wait}<br>
         <strong>Address:</strong> ${hospital.address}<br>
+        <strong>Capacity:</strong> ${hospital.capacity}<br>
         <button onclick="openDirections(${hospital.latitude}, ${hospital.longitude})">Directions</button>
         <button onclick="bookAppointment()">Book Appointment</button>
       </div>
