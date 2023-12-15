@@ -36,6 +36,7 @@ a.navbar-brand {
 
 a:hover {
     background-color: #efefef;
+    cursor: pointer;
 }
 
 

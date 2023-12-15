@@ -3,22 +3,22 @@ import { Container } from 'reactstrap';
 import { NavMenu } from './NavMenu';
 import { Footer } from './Footer/Footer';
 
-export class Layout extends Component {
-  static displayName = Layout.name;
+const Layout = ({ children, logOut }) => {
 
-  render() {
-    return (
-      <div className="main-page">
-        <div>
-            <NavMenu />
-            <Container tag="main">
-                {this.props.children}
-            </Container>
-        </div>
 
-       <Footer />
-
+  return (
+    <div className="main-page">
+      <div>
+          <NavMenu logOut={logOut}/>
+          <Container tag="main">
+              {children}
+          </Container>
       </div>
-    );
-  }
-}
+
+      <Footer />
+
+    </div>
+  );
+};
+
+export default Layout;

@@ -47,9 +47,9 @@ export class NavMenu extends Component {
                 <NavLink tag={Link} className="text-dark" to="/user-management">User Management</NavLink>
               </NavItem>
               <NavItem>
-                   <NavLink to="/user-management" className="icon">
+                   <a onClick={() => this.props.logOut()} className="icon">
                    <img src={accountIcon} width="32" alt="Account Icon" />
-                   </NavLink>
+                   </a>
               </NavItem>
               <NavItem>
                    <NavLink to="/user-management" className="icon">
