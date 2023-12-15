@@ -1,0 +1,30 @@
+/* Home.css */
+
+.home {
+    background-color: #ffffff; /* White background */
+    padding: 20px;
+    text-align: center;
+}
+
+/* Welcome message styling */
+.welcome-message {
+    color: #007bff; /* Color for the welcome message */
+}
+
+/* Styles for the large buttons */
+.btn-large {
+    background-color: #007bff; /* Background for buttons */
+    color: #06003c; /* Text color for buttons */
+    margin-top: 10px; /* Margin for spacing between buttons */
+}
+
+/* Hover effect for the large buttons */
+.btn-large:hover {
+    background-color: #0056b3; /* Darker blue for hover effect */
+}
+
+/* Styles for the row containing the buttons */
+.row {
+    background-color: #ffffff; /* Background for the row */
+    padding: 10px; /* Padding for spacing if needed */
+}
