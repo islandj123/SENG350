@@ -8,19 +8,22 @@
 
 /* Welcome message styling */
 .welcome-message {
-    color: #007bff; /* Color for the welcome message */
+    color: #16006f; /* Color for the welcome message */
+    font-size: 50px; /* Font size for the welcome message */
+    text-align: left; /* Text alignment for the welcome message */
 }
 
 /* Styles for the large buttons */
 .btn-large {
     background-color: #007bff; /* Background for buttons */
     color: #06003c; /* Text color for buttons */
-    margin-top: 10px; /* Margin for spacing between buttons */
+    margin-top: 10px; /* Margin for spacing above buttons */
 }
 
 /* Hover effect for the large buttons */
 .btn-large:hover {
-    background-color: #0056b3; /* Darker blue for hover effect */
+    background-color: #007bff; /* Darker blue for hover effect */
+    color: #ffffff; /* Text color for buttons */
 }
 
 /* Styles for the row containing the buttons */

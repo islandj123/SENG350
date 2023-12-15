@@ -28,15 +28,15 @@ export class Home extends Component {
               <div className='row w-100 gap-4'>
                   <div className='col'>
                       <this.LargeButton link={"/virtual-triage"} label="Virtual Triage" />
-                      <p>This is a virtual triage service.</p>
+                      <p>Click here to start a virtual triage</p>
                   </div>
                   <div className='col'>
                     <this.LargeButton link={"/ed-services"} label="ED Map" />
-                      <p>Find ED services on this map.</p>
+                      <p>Check wait-times at ED services near you</p>
                   </div>
                   <div className='col'>
                       <this.LargeButton link={"/appointment-booking"} label="Appointments" />
-                      <p>Book your appointments here.</p>
+                      <p>Book your appointments here</p>
                   </div>
               </div>
           </div>
