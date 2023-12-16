@@ -7,6 +7,7 @@ import './login.css';
 import { Login } from './components/Login';
 import { GoogleLogin, googleLogout, useGoogleLogin } from '@react-oauth/google';
 import axios from 'axios';
+import logo from './assets/logo_white.png';
 
 function App() {
   const [ authenticated, setAuthenticated] = useState(false);
@@ -69,7 +70,9 @@ function App() {
   } else {
     return(
     <div className='floating-wrapper'>
-      <h1>Misses ED</h1>
+      <img src={logo} alt='Mrs ED Logo' className='logo' />
+      {/* <h1>Mrs ED</h1> */}
+      {/* <img src={logo} alt='Mrs ED Logo' className='logo' /> */}
       <h3 className='mb-5'>SENG 350 - Group 6</h3>
       <h6 className='mb-4'>Sign in to continue with all features</h6>
       <button className='mb-4 button nice-button' onClick={() => login()}>
