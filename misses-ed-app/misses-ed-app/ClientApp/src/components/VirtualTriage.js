@@ -45,7 +45,8 @@ const Triage = ({ decisionTree }) => {
     };
   
     const questionBoxStyle = {
-      border: '1px solid #ccc',
+      border: '2px solid #ccd',
+      borderRadius: '1rem',
       padding: '10px',
       margin: '10px',
     };
@@ -88,7 +89,7 @@ export class VirtualTriage extends Component {
   render() {
     return (
         <div>
-            <h1>Virtual Triage</h1>
+            <h1 className='mb-4'>Virtual Triage</h1>
             <Triage decisionTree={Questions}/>
         </div>
     );

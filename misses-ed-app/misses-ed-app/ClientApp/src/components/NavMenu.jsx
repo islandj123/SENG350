@@ -3,6 +3,7 @@ import { Collapse, Navbar, NavbarBrand, NavbarToggler, NavItem} from 'reactstrap
 import { Link, NavLink } from 'react-router-dom';
 import accountIcon from '../assets/profile.svg';
 import settingsIcon from '../assets/settings.svg';
+import logo from '../assets/mrs_ed_logo_only.png';
 import './NavMenu.css';
 
 export class NavMenu extends Component {
@@ -27,7 +28,10 @@ export class NavMenu extends Component {
     return (
       <header className='header'>
         <Navbar className="navbar-expand-sm navbar-toggleable-sm ng-white border-bottom box-shadow" container light>
-          <NavbarBrand tag={Link} to="/">Misses ED</NavbarBrand>
+          <NavbarBrand className='p-0 pe-2' tag={Link} to="/">
+            <img className='me-2' src={logo} width="48" alt="Misses ED Logo" />
+            Misses ED
+          </NavbarBrand>
           <NavbarToggler onClick={this.toggleNavbar} className="mr-2" />
           <Collapse className="d-sm-inline-flex flex-sm-row-reverse" isOpen={!this.state.collapsed} navbar>
             <ul className="navbar-nav flex-grow gap-4">

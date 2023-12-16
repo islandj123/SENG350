@@ -66,7 +66,7 @@ export class Appointment extends Component {
 
     return (
       <form onSubmit={this.handleCreateAppointment} className="appointment-form">
-        <div className="form-group">
+        <div className="form-group mb-4">
           <label htmlFor="edName">Select ED:</label>
           <select
             id="edName"
@@ -83,7 +83,7 @@ export class Appointment extends Component {
             ))}
           </select>
         </div>
-        <div className="form-group">
+        <div className="form-group mb-4 col-2">
           <label htmlFor="time">Appointment Date:</label>
           <input
             type="datetime-local"
@@ -91,6 +91,7 @@ export class Appointment extends Component {
             name="time"
             value={this.state.newAppointment.time}
             onChange={this.handleInputChange}
+            className='p-1 rounded'
           />
         </div>
         <button type="submit" className="btn btn-primary">

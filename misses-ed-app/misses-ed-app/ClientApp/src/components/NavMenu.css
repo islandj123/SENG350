@@ -22,7 +22,7 @@ a.navbar-brand {
   top: 0;
   width: 100%;
   z-index: 1;
-  background-color: #3888ff;
+  background-color: #0056b388; 
 }
 
 .box-shadow {
@@ -30,14 +30,15 @@ a.navbar-brand {
 }
 
 .active {
-    background-color: #2e6dff;
-    text-decoration: underline;
+  color: #dde !important;
+  background-color: #0056b3AA;
+  text-decoration: underline;
 }
 
 a:hover {
-    background-color: #85bcff;
-    cursor: pointer;
-    
+  color: #000 !important;
+  background-color: #85bcff;
+  cursor: pointer; 
 }
 
 
