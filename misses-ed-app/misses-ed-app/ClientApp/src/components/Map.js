@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const apiKey = 'AIzaSyDxJrcxxMu1WZvzGfIl7UW3UEAygP154To';
 
@@ -99,6 +100,7 @@ function loadGoogleMapsScript(callback) {
 }
 
 const Map = ({ hospitals, location }) => {
+  const navigate = useNavigate();
   useEffect(() => {
     const createMap = async () => {
       try {
@@ -118,7 +120,7 @@ const Map = ({ hospitals, location }) => {
   };
 
   window.bookAppointment = () => {
-    window.location.href = '/appointment-booking';
+    navigate('/appointment-booking');
   };
 
   return <div id="map" style={{ height: '440px', width: '100%' }} />;

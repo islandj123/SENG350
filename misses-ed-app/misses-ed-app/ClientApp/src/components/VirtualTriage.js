@@ -1,7 +1,9 @@
 import React, { Component, useState } from 'react';
 import Questions from './Questions.js'
+import { useNavigate } from 'react-router-dom';
 
 const Triage = ({ decisionTree }) => {
+  const navigate = useNavigate();
     const [answeredQuestions, setAnsweredQuestions] = useState([]);
     const [currentQuestion, setCurrentQuestion] = useState(decisionTree);
   
@@ -75,7 +77,7 @@ const Triage = ({ decisionTree }) => {
           )}
           <p>{currentQuestion.result}</p>
           {currentQuestion.link && (
-            <button style={resultButtonStyle} onClick={() => window.open(currentQuestion.link, '_blank')}>View Available EDs</button>
+            <button style={resultButtonStyle} onClick={() => navigate(currentQuestion.link)}>View Available EDs</button>
           )}
         </div>
       </div>
