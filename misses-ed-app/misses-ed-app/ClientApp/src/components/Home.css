@@ -10,14 +10,16 @@
 .welcome-message {
     color: #16006f; /* Color for the welcome message */
     font-size: 50px; /* Font size for the welcome message */
-    text-align: left; /* Text alignment for the welcome message */
+    text-align: center; /* Text alignment for the welcome message */
+    margin-top: 50px;
+    margin-left: -1000px;
 }
 
 /* Styles for the large buttons */
 .btn-large {
-    background-color: #007bff; /* Background for buttons */
+    background-color: #ffffff; /* Background for buttons */
     color: #06003c; /* Text color for buttons */
-    margin-top: 10px; /* Margin for spacing above buttons */
+    margin-top: 4px; /* Margin for spacing above buttons */
 }
 
 /* Hover effect for the large buttons */
@@ -30,4 +32,13 @@
 .row {
     background-color: #ffffff; /* Background for the row */
     padding: 10px; /* Padding for spacing if needed */
+}
+
+.logo {
+    position: relative;
+    float: left;
+    top: -40px;
+    left: 1px;
+    width: 200px; /* adjust as needed */
+    height: auto;
 }

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import './Home.css';
+import mrsEdLogo from './logo_white.png';
 
 
 export class Home extends Component {
@@ -23,45 +24,24 @@ export class Home extends Component {
 
   render() {
       return (
-          <div className="home">
-              <h2 className='mb-4 welcome-message'>Welcome {this.state.username}!</h2>
-              <div className='row w-100 gap-4'>
-                  <div className='col'>
-                      <this.LargeButton link={"/virtual-triage"} label="Virtual Triage" />
-                      <p>Click here to start a virtual triage</p>
-                  </div>
-                  <div className='col'>
-                    <this.LargeButton link={"/ed-services"} label="ED Map" />
-                      <p>Check wait-times at ED services near you</p>
-                  </div>
-                  <div className='col'>
-                      <this.LargeButton link={"/appointment-booking"} label="Appointments" />
-                      <p>Book your appointments here</p>
-                  </div>
-              </div>
-          </div>
+            <div className="home">
+                <img src={mrsEdLogo} alt="Mrs ED Logo" className="logo" />
+                <h2 className='mb-4 welcome-message'>Welcome {this.state.username}!</h2>
+                <div className='row w-100 gap-4'>
+                    <div className='col'>
+                        <this.LargeButton link={"/virtual-triage"} label="Virtual Triage" />
+                        <p>Click here to start a virtual triage</p>
+                    </div>
+                    <div className='col'>
+                        <this.LargeButton link={"/ed-services"} label="ED Map" />
+                        <p>Check wait-times at ED services near you</p>
+                    </div>
+                    <div className='col'>
+                        <this.LargeButton link={"/appointment-booking"} label="Appointments" />
+                        <p>Book your appointments here</p>
+                    </div>
+                </div>
+            </div>
       );
   }
 }
-//   render() {
-//     return (
-//       <div className="home">
-//         <h2 className='mb-4'>Welcome {this.state.username}!</h2>
-//         <div className='row w-100 gap-4'>
-//           <div className='col'>
-//             <this.LargeButton link={"/virtual-triage"} label="Virtual Triage"></this.LargeButton>
-//             <p>This is a virtual triage service.</p>
-//           </div>
-//           <div className='col'>
-//           <this.LargeButton link={"/ed-services"} label="ED Map"></this.LargeButton>
-//             <p>Find ED services on this map.</p>
-//           </div>
-//           <div className='col'>
-//             <this.LargeButton link={"/appointment-booking"} label="Appointments"></this.LargeButton>
-//             <p>Book your appointments here.</p>
-//           </div>
-//         </div>
-//       </div>
-//     );
-//   }
-// }
