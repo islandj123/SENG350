@@ -65,8 +65,7 @@ export class ED extends Component {
 
     return (
       <div>
-        <h1 id="tableLabel">ED</h1>
-        <p>This component will demonstrate fetching ED data from the server.</p>
+        <h1 id="tableLabel">Available EDs</h1>
         {contents}
       </div>
     );

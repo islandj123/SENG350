@@ -108,8 +108,7 @@ export class Appointment extends Component {
       </p>
     ) : (
       <>
-        <h1 id="tableLabel">Appointment</h1>
-        <p>This component will demonstrate fetching appointment data from the server.</p>
+        <h1 id="tableLabel">Book an appointment</h1>
         {Appointment.renderAppointmentsTable(this.state.appointments)}
         {this.renderAppointmentForm()}
       </>
